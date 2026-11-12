@@ -93,9 +93,9 @@ Tự kiểm tay trong file JSON:
 | `ThachTrungDuc_persons.zip` | `000000522889` người #3 | 51 | Có (`left_knee` occluded → `v = 1`; `right_ear` outside → `v = 0`) | Có (16) |
 | `ThachTrungDuc_faces.zip` | `face_575921` | 39 | Có (13/13 điểm `v = 2`) | Có (13) |
 
-Sau khi xuất, CVAT ghi `occluded` thành `v = 1` và `outside` thành `v = 0`. Tọa độ của điểm `outside` trong file là `0, 0` hay tọa độ cũ? **Phần lớn là tọa độ cũ (11 điểm); một số điểm xuất ra `0, 0` (ví dụ `right_ear` của người #3 ảnh crowd)** — chuẩn COCO ghi `0, 0`, nhưng điểm `v = 0` không được dùng khi huấn luyện và khi chấm nên không ảnh hưởng.
+Sau khi xuất, CVAT ghi `occluded` thành `v = 1` và `outside` thành `v = 0`. Tọa độ của điểm `outside` trong file là `0, 0` hay tọa độ cũ? **Phần lớn là tọa độ cũ (3 điểm v = 0 vẫn mang tọa độ cũ); một số điểm xuất ra `0, 0` (ví dụ `right_ear` của người #3 ảnh crowd)** — chuẩn COCO ghi `0, 0`, nhưng điểm `v = 0` không được dùng khi huấn luyện và khi chấm nên không ảnh hưởng.
 
-Hai job đã chuyển sang completed trên CVAT? Có *(kiểm lại sau lần `export` cuối)*
+Hai job đã chuyển sang completed trên CVAT? Có
 
 Dán phần **TÓM TẮT** in ra từ `src/check_submission.py`:
 
@@ -108,14 +108,14 @@ Dán phần **TÓM TẮT** in ra từ `src/check_submission.py`:
 - File face: ThachTrungDuc_faces.zip
   Số ảnh: 8 · số skeleton `face`: 8 · mỗi annotation 39 số
   Skeleton theo ảnh: face_105668=1, face_143959=1, face_155465=1, face_301643=1, face_380639=1, face_41666=1, face_442231=1, face_575921=1
-  Cờ v: v=2 96 (92%) · v=1 0 (0%) · v=0 8 (8%)
-  num_keypoints trung bình: 12.0
-- Ghi chú: 11 điểm v = 0 vẫn mang tọa độ cũ (CVAT 2.x xuất như vậy; chuẩn COCO ghi 0, 0). Không phải lỗi: điểm v = 0 bị bỏ qua khi huấn luyện và khi chấm.
+  Cờ v: v=2 96 (92%) · v=1 8 (8%) · v=0 0 (0%)
+  num_keypoints trung bình: 13.0
+- Ghi chú: 3 điểm v = 0 vẫn mang tọa độ cũ (CVAT 2.x xuất như vậy; chuẩn COCO ghi 0, 0). Không phải lỗi: điểm v = 0 bị bỏ qua khi huấn luyện và khi chấm.
 - Số [LỖI]: 0 · số [CẢNH BÁO]: 1
 Kết quả: ĐẠT (đọc lại từng cảnh báo ở trên)
 ```
 
-*(Lưu ý: chạy `fix_kinh_ram.py` + `python lab.py export` lần cuối thì dán lại TÓM TẮT mới — file face sẽ hiện 8 điểm `v = 1`.)*
+Sau khi sửa, tự kiểm tay lại ảnh kính râm `face_301643` trong file JSON: 8 điểm mắt đều `v = 1` với tọa độ nằm trên gọng kính (ví dụ `left_eye_outer (398, 252)`, `right_eye_upper (172, 235)`), `nose_tip` / `mouth_left` / `mouth_right` / `lip_upper` / `lip_lower` giữ `v = 2` nguyên vị trí, `num_keypoints = 13`.
 
 Các `[CẢNH BÁO]` còn giữ nguyên và lý do:
 
