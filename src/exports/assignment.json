@@ -1,0 +1,65 @@
+{
+ "mssv": "2A202603141",
+ "ten": "ThachTrungDuc",
+ "pool_version": "d04-k5-v2",
+ "cvat_user": "2A202603141",
+ "project": "d04-keypoint",
+ "persons": [
+  "000000156069.jpg",
+  "000000194027.jpg",
+  "000000225138.jpg",
+  "000000241837.jpg",
+  "000000493741.jpg",
+  "000000091637.jpg",
+  "000000177338.jpg",
+  "000000324953.jpg",
+  "000000210604.jpg",
+  "000000351176.jpg",
+  "000000167027.jpg",
+  "000000522889.jpg"
+ ],
+ "faces": [
+  "face_155465.jpg",
+  "face_380639.jpg",
+  "face_575921.jpg",
+  "face_105668.jpg",
+  "face_442231.jpg",
+  "face_143959.jpg",
+  "face_301643.jpg",
+  "face_41666.jpg"
+ ],
+ "tasks": {
+  "persons": {
+   "task_id": 17,
+   "job_id": 15,
+   "task_name": "persons-ThachTrungDuc"
+  },
+  "faces": {
+   "task_id": 18,
+   "job_id": 16,
+   "task_name": "faces-ThachTrungDuc"
+  },
+  "persons-extra": {
+   "task_id": 19,
+   "job_id": 17,
+   "task_name": "persons-extra-ThachTrungDuc"
+  },
+  "faces-extra": {
+   "task_id": 20,
+   "job_id": 18,
+   "task_name": "faces-extra-ThachTrungDuc"
+  }
+ },
+ "persons_extra": [
+  "000000073537.jpg",
+  "000000074156.jpg",
+  "000000254060.jpg"
+ ],
+ "faces_extra": [
+  "face_300200.jpg",
+  "face_317330.jpg",
+  "face_344941.jpg",
+  "face_379585.jpg",
+  "face_494518.jpg"
+ ]
+}
