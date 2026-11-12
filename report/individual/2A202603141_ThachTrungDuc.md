@@ -6,7 +6,7 @@ Dữ liệu: 12 ảnh người COCO val2017 (Lin et al., 2014) và 8 ảnh chân
 
 - Họ tên: Thạch Trung Đức
 - MSSV: 2A202603141
-- Email: *(điền email của bạn)*
+- Email: thachduc1201@gmail.com
 - Link repository: https://github.com/ThachDuc123/K5-L2A-DAY04-ThachTrungDuc-2A202603141-KeypointPose
 - Phiên bản CVAT (Help → About): 2.74.1
 - Máy: hệ điều hành Windows 11 · RAM: Docker dùng tối đa 7,6 GB (`lab.py check` báo OK) · chạy CVAT chế độ đầy đủ
