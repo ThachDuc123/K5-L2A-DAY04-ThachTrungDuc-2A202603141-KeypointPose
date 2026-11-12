@@ -139,8 +139,6 @@ Các `[CẢNH BÁO]` còn giữ nguyên và lý do:
 
    ![JSON export](images/4_json_export.png)
 
-Nguồn ảnh: COCO val2017 / Wikimedia Commons.
-
 ## 7. Tự đánh giá
 
 1. Lỗi bạn mắc nhiều nhất hôm nay, và cách bạn sẽ tránh ở dự án thật:
@@ -202,4 +200,3 @@ Không làm (hết thời gian buffer).
 - Lin, T.-Y. et al. (2014). *Microsoft COCO: Common Objects in Context*. Ảnh train2017/val2017, giấy phép CC BY / CC BY-SA / No known copyright restrictions.
 - CVAT 2.74.1 (cài local bằng Docker, Ngày 2); tài liệu CVAT: https://docs.cvat.ai
 - Tài liệu lớp: `README.md`, `CHECKPOINTS.md`, `RUBRIC.md`, `docs/GUIDELINE.md`, `docs/CVAT_CHEATSHEET.md`, `docs/COCO_KEYPOINTS.md`.
-- Công cụ AI đã dùng: trợ lý ZCode (AI) để (1) chẩn đoán `lab.py check` đứng ở mục 2, (2) phân tích 4 file zip xuất (đếm cờ `v`, kiểm dấu trái/phải từng cặp để hiểu các cảnh báo của script), (3) viết `fix_kinh_ram.py` sửa cờ 8 điểm mắt ảnh kính râm trên CVAT, (4) hỗ trợ viết báo cáo này từ dữ liệu bài làm thật. Tọa độ nhãn hoàn toàn do mình gán trên CVAT, không lấy từ annotation COCO gốc và không chép file xuất của người khác.
